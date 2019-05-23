@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Rick and Morty</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./dist/css/bundle.min.css">
+</head>
+<body>
+<div>
+  <div>
+    <div>
+      
+			<div class="characters-title">
+        <div>Rick and Morty</div>
+        <div>
+          <div>Hey, did you ever want to hold a Terry fold?</div>
+        </div>
+      </div>
+      
+			<div>
+				<button class="filter" value="?name=rick">?name=rick</button>
+        {{characters_}}
+				<div class="characters-list" data-character-module>
+				{% for character in characters %}
+					<div class="character">
+            <div>
+              <div>
+								<div class="character__image">
+									<img src="{{character.image}}" alt="" />
+								</div>
+                <div class="character__name">{{ character.name }}</div>
+              </div>
+            </div>
+            <div class="character__description">
+              <div class="character__description-list">
+                <div class="character__description-name">STATUS</div>
+                <div class="character__description-desc">{{character.status}}</div>
+              </div>
+              <div class="character__description-list">
+                <div>SPECIES</div>
+                <div>{{character.species}}</div>
+              </div>
+              <div class="character__description-list">
+                <div>GENDER</div>
+                <div>{{character.gender}}</div>
+              </div>
+              <div class="character__description-list">
+                <div>ORIGIN</div>
+                <div>{{character.origin.name}}</div>
+              </div>
+              <div class="character__description-list">
+                <div>LAST LOCATION</div>
+                <div>{{character.location.name}}</div>
+              </div>
+            </div>
+          </div>
+				{% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="./dist/js/bundle.min.js"></script>
+</body>
+</html>

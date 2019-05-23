@@ -1,0 +1,42 @@
+.characters-title {
+	text-align: center;
+	padding: 50px;
+}
+
+.characters-list {
+	display: flex;
+	flex-wrap: wrap;
+
+	.character {
+		flex-basis: calc(100%/4);
+		border-radius: 4px;
+		
+		&__image {
+			background: $white;
+			width: 160px;
+			height: 160px;
+		}
+
+		&__name {
+			background: rgba(0, 0, 0, .3);
+			color: $white;
+		}
+
+		&__description {
+			background: gray;
+			padding: 20px;
+			&-name {
+				color: #ccc;
+				text-transform: uppercase;
+			}
+
+			&-desc {
+				color: orange;
+			}
+
+			&-list {
+				display: flex;
+			}
+		}
+	}
+}
